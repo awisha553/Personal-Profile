@@ -90,6 +90,7 @@
         }
 
         form input,
+        form select,
         form textarea {
             padding: 0.75rem;
             margin-bottom: 1rem;
@@ -97,19 +98,54 @@
             border-radius: 4px;
             font-size: 1rem;
             font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
 
         form input:focus,
+        form select:focus,
         form textarea:focus {
             outline: none;
             border-color: #575757;
         }
 
+        /* Gender */
+        .gender {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .gender label {
+            font-weight: normal;
+        }
+
+        .gender input {
+            margin-right: 5px;
+        }
+
+        /* Hobbies */
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hobbies label {
+            font-weight: normal;
+        }
+
+        .hobbies input {
+            margin-right: 5px;
+        }
+
+        /* Message */
         form textarea {
             min-height: 150px;
             resize: vertical;
         }
 
+        /* Submit Button */
         form input[type="submit"] {
             background-color: #333;
             color: white;
@@ -168,6 +204,12 @@
             form {
                 padding: 1rem;
             }
+
+            .gender,
+            .hobbies {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -196,15 +238,17 @@
 
             <form action="mailto:w11ssvy@gmail.com" method="post" enctype="text/plain">
 
-                <label for="name">Name:</label>
+                <!-- Name -->
+                <label for="name">Full Name:</label>
                 <input
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Enter your name"
+                    placeholder="Enter your full name"
                     required
                 >
 
+                <!-- Email -->
                 <label for="email">Email:</label>
                 <input
                     type="email"
@@ -214,6 +258,102 @@
                     required
                 >
 
+                <!-- Phone -->
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                >
+
+                <!-- Date of Birth -->
+                <label for="dob">Date of Birth:</label>
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                >
+
+                <!-- Nationality -->
+                <label for="nationality">Nationality:</label>
+                <select id="nationality" name="nationality">
+                    <option value="">Select your nationality</option>
+                    <option value="Nepali">Nepali</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="American">American</option>
+                    <option value="British">British</option>
+                    <option value="Australian">Australian</option>
+                    <option value="Canadian">Canadian</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <!-- Gender -->
+                <label>Gender:</label>
+
+                <div class="gender">
+                    <label>
+                        <input type="radio" name="gender" value="Male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="Other">
+                        Other
+                    </label>
+                </div>
+
+                <!-- Address -->
+                <label for="address">Address:</label>
+                <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Enter your address"
+                >
+
+                <!-- Hobbies -->
+                <label>Hobbies:</label>
+
+                <div class="hobbies">
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Reading">
+                        Reading
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Music">
+                        Music
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Traveling">
+                        Traveling
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Photography">
+                        Photography
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Sports">
+                        Sports
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Gaming">
+                        Gaming
+                    </label>
+                </div>
+
+                <!-- Subject -->
                 <label for="subject">Subject:</label>
                 <input
                     type="text"
@@ -223,6 +363,7 @@
                     required
                 >
 
+                <!-- Message -->
                 <label for="message">Message:</label>
                 <textarea
                     id="message"
@@ -231,6 +372,7 @@
                     required
                 ></textarea>
 
+                <!-- Submit -->
                 <input type="submit" value="Send Message">
 
             </form>
