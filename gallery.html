@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery - Personal Profile</title>
+
+    <style>
+        body {
+            background-image: url(abstarct.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        /* Main */
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 2rem;
+        }
+
+        /* Images */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Video */
+        video {
+            width: 500px;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Audio */
+        audio {
+            width: 500px;
+            max-width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            nav ul li {
+                display: block;
+                margin: 10px;
+            }
+
+            .gallery img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            video {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Gallery -->
+    <main>
+
+        <h1>My Gallery</h1>
+
+        <!-- Images -->
+        <h2>NEW YORK CITY</h2>
+
+        <div class="gallery">
+
+            <img src="nycc.jpg" alt="New York">
+        </div>
+
+        <!-- Video -->
+        <h2>My Video</h2>
+
+        <video controls>
+            <source src="myvideo.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+        <!-- Audio -->
+        <h2>My Audio</h2>
+
+        <audio controls>
+            <source src="myaudio.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Awisha Pandey. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
